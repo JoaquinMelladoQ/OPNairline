@@ -1,6 +1,9 @@
 module Api
     module V1
         class AirlinesController < ApplicationController
+            protect_from_frogery with: :null_session
+
+
             def index
                 airlines = Airline.all
 
